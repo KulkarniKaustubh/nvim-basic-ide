@@ -107,8 +107,12 @@ return packer.startup(function(use)
   -- Fugitive
   use { "tpope/vim-fugitive" }
 
+  -- Black
+  use { "averms/black-nvim" }
+
   -- One Dark Theme
   use { "lunarvim/onedarker.nvim" }
+  use { "catppuccin/nvim" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

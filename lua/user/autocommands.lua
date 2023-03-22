@@ -51,3 +51,6 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
     end
   end,
 })
+
+-- Automatically format python code with `black`
+vim.cmd "autocmd BufWritePre *.py Black"

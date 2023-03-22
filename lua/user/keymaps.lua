@@ -38,8 +38,10 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<leader>s", ":w!<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<leader>bn", ":bnext<CR>", opts)
-keymap("n", "<leader>bp", ":bprevious<CR>", opts)
+-- keymap("n", "<leader>bn", ":bnext<CR>", opts)
+-- keymap("n", "<leader>bp", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
@@ -47,11 +49,11 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 -- Close buffers
 keymap("n", "<leader>q", "<cmd>Bdelete!<CR>", opts)
 
--- Center current line
-keymap("n", "<C-l>", "zz", opts)
+-- Close nvim
+keymap("n", "<leader>Q", ":q<CR>", opts)
 
 -- Center current line
-keymap("n", "<C-c>w", ":set list!<CR>", opts)
+keymap("n", "<C-l>", "zz", opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -72,10 +74,11 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
-keymap("n", "<leader>,", ":Telescope oldfiles<CR>", opts)
-keymap("n", "<C-s>", ":Telescope current_buffer_fuzzy_find<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<C-s>", ":Telescope current_buffer_fuzzy_find<CR>", opts)
+keymap("n", "<leader>,", ":Telescope oldfiles<CR>", opts)
+keymap("n", "<leader>p", ":lua require('telescope').extensions.projects.projects()<CR>", opts)
 
 -- Git
 -- keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
