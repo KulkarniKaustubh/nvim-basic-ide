@@ -108,7 +108,7 @@ return packer.startup(function(use)
   use { "tpope/vim-fugitive" }
 
   -- Black
-  use { "averms/black-nvim" }
+  use { "psf/black" }
 
   -- One Dark Theme
   use { "lunarvim/onedarker.nvim" }
