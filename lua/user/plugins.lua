@@ -112,6 +112,8 @@ return packer.startup(function(use)
 
   -- One Dark Theme
   use { "lunarvim/onedarker.nvim" }
+
+  -- Catppucin Theme
   use { "catppuccin/nvim" }
 
   -- Automatically set up your configuration after cloning packer.nvim
