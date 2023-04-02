@@ -55,6 +55,13 @@ keymap("n", "<leader>Q", ":q<CR>", opts)
 -- Center current line
 keymap("n", "<C-l>", "zz", opts)
 
+-- Paste in new line
+keymap("n", "<A-p>", "o<ESC>p", opts)
+
+-- Find and replace the word under the cursor
+keymap("n", "<leader>r", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gcI<Left><Left><Left><Left>")
+-- h/<C-r>h/gcI<left><left><left>')
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
@@ -66,6 +73,13 @@ keymap("v", ">", ">gv", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
+
+-- Find and replace the selected word
+keymap("v", "<leader>r", '"hy:%s/<C-r>h/<C-r>h/gcI<left><left><left>')
+
+-- Move a visual block up or down
+keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 
 -- Plugins --
 -- NvimTree
