@@ -37,7 +37,7 @@ catppuccin.setup{
         mocha = {
             base = "#11111B",
             mantle = "#181825",
-            crust = "#11111B",
+            crust = "#1E1E2E",
         },
     },
     custom_highlights = {},
