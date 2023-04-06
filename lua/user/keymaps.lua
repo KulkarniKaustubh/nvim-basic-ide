@@ -56,7 +56,7 @@ keymap("n", "<leader>Q", ":q<CR>", opts)
 keymap("n", "<C-l>", "zz", opts)
 
 -- Paste in new line
-keymap("n", "<A-p>", "o<ESC>p", opts)
+keymap("n", ",p", "o<ESC>p", opts)
 
 -- Find and replace the word under the cursor
 keymap("n", "<leader>r", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gcI<Left><Left><Left><Left>")
