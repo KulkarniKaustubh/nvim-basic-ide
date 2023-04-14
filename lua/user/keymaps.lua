@@ -56,7 +56,7 @@ keymap("n", "<leader>Q", ":q<CR>", opts)
 keymap("n", "<C-l>", "zz", opts)
 
 -- Paste in new line
-keymap("n", ",p", "o<ESC>p", opts)
+keymap("n", "P", "o<ESC>p", opts)
 
 -- Find and replace the word under the cursor
 keymap("n", "<leader>r", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gcI<Left><Left><Left><Left>")
@@ -75,7 +75,7 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Find and replace the selected word
-keymap("v", "<leader>r", '"hy:%s/<C-r>h/<C-r>h/gcI<left><left><left>')
+keymap("v", "<leader>r", '"hy:%s/<C-r>h/<C-r>h/gcI<left><left><left><left>')
 
 -- Move a visual block up or down
 keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
@@ -125,3 +125,6 @@ if vim.g.neovide == true then
   keymap("n", "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>", { silent = true })
   keymap("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>", { silent = true })
 end
+
+-- Undo Tree
+keymap("n", "<leader>u", vim.cmd.UndotreeToggle, opts)
